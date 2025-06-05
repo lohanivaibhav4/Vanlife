@@ -1,2 +1,0 @@
-# Vanlife
-Van Booking Application
