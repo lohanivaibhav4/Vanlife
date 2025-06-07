@@ -7,6 +7,7 @@ export default function HomeLayout(){
             <header>
                 <Link to="/"><h1>#VANLIFE</h1></Link>
                 <nav className='main-nav'>
+                    <NavLink to="host" className={({isActive})=> isActive? 'active' : ''}>Host</NavLink>
                     <NavLink to="about" className={({isActive})=> isActive? 'active' : ''}>About</NavLink>
                     <NavLink to="vans" className={({isActive})=> isActive? 'active' : ''}>Vans</NavLink>
                 </nav>
