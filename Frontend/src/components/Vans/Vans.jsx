@@ -40,9 +40,15 @@ export default function Vans() {
         <h2>Explore our van options</h2>
 
         <div className="filters">
-          <Link to="?type=simple"><button>Simple</button></Link>
-          <Link to="?type=rugged"><button>Rugged</button></Link>
-          <Link to="?type=luxury"><button>Luxury</button></Link>
+          <Link to="?type=simple">
+          <button className={`${type == 'simple'? 'simple':''}`}>Simple</button>
+          </Link>
+          <Link to="?type=rugged">
+          <button className={`${type == 'rugged'? 'rugged':''}`}>Rugged</button>
+          </Link>
+          <Link to="?type=luxury">
+          <button className={`${type == 'luxury'? 'luxury':''}`}>Luxury</button>
+          </Link>
           <Link to="." className="clear-filters">Clear filters</Link>
         </div>
 

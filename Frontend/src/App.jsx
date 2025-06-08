@@ -12,6 +12,7 @@ import Income from './components/Host/INcome'
 import HostVans from './components/Host/HostVans'
 import Reviews from './components/Host/Reviews'
 import Signin from './components/Signin'
+import HostVanDetails from './components/Host/HostVanDetails'
 
 function App() {
   
@@ -26,12 +27,15 @@ function App() {
           <Route path='vans' element={<Vans />} />
           <Route path='vans/:id' element={<VanDetails />} />
           <Route path='signin' element={<Signin />} />
+
           <Route path='host' element={<HostLayout />}>
             <Route index element={<Dashboard />} />
             <Route path='income' element={<Income />} />
-            <Route path='vans' element={<HostVans />} />
             <Route path='reviews' element={<Reviews />} />
+            <Route path='vans' element={<HostVans />} />
+            <Route path='vans/:id' element={<HostVanDetails />} />
           </Route>
+
         </Route>
       </Routes>
     </BrowserRouter>

@@ -33,7 +33,7 @@ h1 {
   display: flex;
   align-items: center;
 }
-.main-nav > .active , .host-nav > .active{
+.main-nav > .active , .host-nav > .active, .clear-filters:hover {
   border-bottom: 2px solid #4d4d4d64;
 }
 
@@ -76,7 +76,8 @@ footer {
   font-weight: 800;
   margin: 0em;
 }
-.home-div button {
+.home-div button, .list-new-van{
+  box-sizing: border-box;
   margin: 2em;
   padding: 1em 2em;
   background-color: #ff8c38;
@@ -125,17 +126,18 @@ footer {
 /* VANS-PAGE-START */
 
 .vans-container{
-    margin: 2em 1em;
+  margin: 2em 1em;
+  height: 100%
 }
 .vans-container > h2{
-    font-size: 2em;
-    color: #161616;
+  font-size: 2em;
+  color: #161616;
 }
 .vans-div{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 1.5em 0em;
+    margin: 2.55em 0em;
     gap: 1.5em;
 }
 .filters{
@@ -149,8 +151,9 @@ footer {
     margin-left: auto;
 }
 
+
 .filters button {
-  padding: 1em 2em;
+  padding: 0.8em 1.5em;
   border-radius: 5px;
   border: none;
   font-family: inherit;
@@ -159,6 +162,19 @@ footer {
   color: #4D4D4D;
   font-weight: 600;
 }
+.filters > a > .rugged{
+  background-color: #115E59;
+  color: #FFEAD0;
+}
+.filters > a > .simple{
+  background-color: #E17654;
+  color: #FFEAD0;
+}
+.filters > a > .luxury{
+  background-color: #161616;
+  color: #FFEAD0;
+}
+
 .van-tile{
     width: 225px;
     box-sizing: border-box;
@@ -198,13 +214,13 @@ footer {
 }
 
 .rugged{
-    background-color: #115E59;
+  background-color: #115E59;
 }
 .simple{
-    background-color: #E17654;
+  background-color: #E17654;
 }
 .luxury{
-    background-color: #161616;
+  background-color: #161616;
 }
 
 
@@ -305,12 +321,45 @@ footer {
   color: #ff8c38;
 }
 
-
-
 /* SIGNIN-PAGE-END */
 
+/* HOST-VANS-PAGE-START */
+.host-vans-page{
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  justify-content: space-around;
+  gap: 1em;
+}
+.host-vans-tile > img{
+  width: 80px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px black;
+}
+.host-vans-tile{
+  display: flex;
+  padding: 1em;
+  border-radius: 5px;
+  gap: 1em;
+  background-color: #FFFFFF;
+}
+.host-vans-tile > h3{
+  display: block;
+}
 
+.host-vans-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.list-new-van{
+  margin: 0;
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: bold;
+}
 
+/* HOST-VANS-PAGE-END */
 
 
 

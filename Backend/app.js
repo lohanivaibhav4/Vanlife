@@ -13,6 +13,9 @@ const vansRouter = require("./Routes/Vans");
 app.use(`${api}/vans`, vansRouter);
 app.use(`${api}/vans/:id`, vansRouter);
 
+const hostRouter = require('./Routes/Host')
+app.use(`${api}/host/vans`, hostRouter);
+
 mongoose
   .connect(process.env.MONGODB)
   .then(() => {

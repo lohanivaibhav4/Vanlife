@@ -1,10 +1,10 @@
 const express = require("express");
-const router = express.Router();
+const vansRouter = express.Router();
 const mongoose = require("mongoose");
 const { Van } = require("../Models/Vans");
 
 //! GET ALL VANS
-router.get(`/`, async (req, res) => {
+vansRouter.get(`/`, async (req, res) => {
   const vansData = await Van.find();
   if (!vansData) {
     res.status(500).json({ success: false });
@@ -12,8 +12,9 @@ router.get(`/`, async (req, res) => {
   res.send(vansData);
 });
 
+
 //! GET VAN WITH ID 
-router.get(`/:id`, async (req, res) => {
+vansRouter.get(`/:id`, async (req, res) => {
   const id = req.params.id
   const vanData = await Van.findOne({id});
   if (!vanData) {
@@ -23,7 +24,7 @@ router.get(`/:id`, async (req, res) => {
 });
 
 //! CREATE NEW VAN
-router.post(`/`, (req, res) => {
+vansRouter.post(`/`, (req, res) => {
   const van = new Van({
     id: req.body.id,
     name: req.body.name,
@@ -42,4 +43,4 @@ router.post(`/`, (req, res) => {
     });
 });
 
-module.exports = router;
+module.exports = vansRouter;
