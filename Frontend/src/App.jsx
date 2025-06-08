@@ -11,6 +11,7 @@ import Dashboard from './components/Host/Dashboard'
 import Income from './components/Host/INcome'
 import HostVans from './components/Host/HostVans'
 import Reviews from './components/Host/Reviews'
+import Signin from './components/Signin'
 
 function App() {
   
@@ -24,6 +25,7 @@ function App() {
           <Route path='about' element={<About />}/>
           <Route path='vans' element={<Vans />} />
           <Route path='vans/:id' element={<VanDetails />} />
+          <Route path='signin' element={<Signin />} />
           <Route path='host' element={<HostLayout />}>
             <Route index element={<Dashboard />} />
             <Route path='income' element={<Income />} />

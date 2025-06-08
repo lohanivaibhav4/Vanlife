@@ -1,9 +1,12 @@
 import React from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link,useSearchParams } from "react-router-dom";
 
 export default function Vans() {
   const [vans, setVans] = React.useState([]);
+  const [searchParams, setSearchParams] = useSearchParams()
+  const type = searchParams.get('type')
+  
 
   React.useEffect(() => {
     axios
@@ -12,7 +15,9 @@ export default function Vans() {
       .catch((err) => console.log(err));
   }, []);
 
-  const vanElements = vans.map((van) => {
+  const vanDisplayed = type? vans.filter((van)=>van.type == type) : vans
+
+  const vanElements = vanDisplayed.map((van) => {
     const typeStyle = van.type == 'rugged'? 'rugged' :  van.type == 'simple'? 'simple' : 'luxury'
 
     return (

@@ -30,6 +30,8 @@ h1 {
   color: #4d4d4d;
   font-weight: 600;
   font-size: 1em;
+  display: flex;
+  align-items: center;
 }
 .main-nav > .active , .host-nav > .active{
   border-bottom: 2px solid #4d4d4d64;
@@ -266,10 +268,46 @@ footer {
 
 /* HOST-LAYOUT-PAGE-START */
 
+/* HOST-LAYOUT-PAGE-END */
+
+/* SIGNIN-PAGE-START */
+.signin-div > form{
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  height: 55.7dvh;
+  justify-content: center;
+}
+.signin-div{
+  margin: 2em 1em;
+  text-align: center;
+}
+.signin-div > form > input, button{
+  outline: none;
+  background-color: #FFFFFF;
+  padding: 1em 2em;
+  color: #4D4D4D;
+  font-family: inherit;
+  border: 2px solid #4d4d4d2b;
+  border-radius: 5px;
+}
+.signin-div > form > button{
+  background-color: #FF8C38;
+  color: white;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 0.9em;
+  border: none;
+  margin: 2em 0em;
+}
+.signin-div > p > a{
+  font-weight: bold;
+  color: #ff8c38;
+}
 
 
 
-
+/* SIGNIN-PAGE-END */
 
 
 
