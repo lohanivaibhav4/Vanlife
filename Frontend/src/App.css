@@ -466,6 +466,111 @@ footer {
   color: #FF8C38;
   margin: 0.25em;
 }
+
+.income-container{
+  margin: 1em;
+}
+.income-details > h3{
+  font-size: 3em;
+
+}
+.income-details > h2{
+  font-size: 2.25em;
+}
+.income-details > p{
+  color: #4D4D4D;
+}
+.income-details > p > span{
+  border-bottom: 2px solid #25252559;
+}
+.income-container > div > p{
+  margin: 0;
+}
+.transactions{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 2em 0em;
+}
+.transactions > div{
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  padding: 0.5em;
+  border-radius: 10px;
+  font-size: 1.5em;
+}
+.transactions > div > h4{
+  margin: .25em;
+}
+.transactions > div > p{
+  font-size: 0.5em;
+}
+.transactions > p{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.transactions > p > span{
+  font-size: 0.75em;
+  font-weight: 500;
+  color: #4D4D4D;
+}
+.ratings-graph{
+  margin: 2em 0em;
+}
+.ratings-graph > div > div{
+  width: 70%;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #B9B9B9;
+}
+.ratings-graph > div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #4D4D4D;
+}
+.ratings-graph > div >p{
+  display: flex;
+  align-items: center;
+}
+.review-container{
+  margin: 2em 1em;
+}
+.review-info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.review-info > h2{
+  font-size: 2em;
+}
+.review-container > p > span{
+  font-size: 2em;
+  font-weight: bold;
+}
+.review-container > p{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.ratings-graph > div >.filled{
+  background-color: #ff8c38;
+}
+.user-name{
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.user-name > p{
+  font-size: 0.75em;
+  font-weight: bold;
+  color: #4D4D4D;
+}
+
 /* HOST-VANS-PAGE-END */
 
 
