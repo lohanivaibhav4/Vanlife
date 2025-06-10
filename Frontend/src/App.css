@@ -33,7 +33,7 @@ h1 {
   display: flex;
   align-items: center;
 }
-.main-nav > .active , .host-nav > .active, .clear-filters:hover {
+.main-nav > .active , .host-nav > .active{
   border-bottom: 2px solid #4d4d4d64;
 }
 
@@ -48,6 +48,7 @@ footer {
   gap: 0.5em;
   padding: 0.5em;
   box-sizing: border-box;
+  height: 80px;
 }
 .copyright {
   display: flex;
@@ -145,12 +146,20 @@ footer {
     gap: 1em;
     align-items: center;
 }
-.clear-filters{
-    text-decoration: none;
-    color: #4D4D4D;
-    margin-left: auto;
+.filters > .clear-filters{
+  text-decoration: none;
+  color: #4D4D4D;
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  font-family: inherit;
+  border-radius: 0;
+  padding: 0.25em;
+  margin-right: 0.5em;
 }
-
+.clear-filters:hover{
+  border-bottom: 2px solid #2525253a;
+}
 
 .filters button {
   padding: 0.8em 1.5em;
@@ -162,15 +171,15 @@ footer {
   color: #4D4D4D;
   font-weight: 600;
 }
-.filters > a > .rugged{
+.filters > .rugged{
   background-color: #115E59;
   color: #FFEAD0;
 }
-.filters > a > .simple{
+.filters > .simple{
   background-color: #E17654;
   color: #FFEAD0;
 }
-.filters > a > .luxury{
+.filters > .luxury{
   background-color: #161616;
   color: #FFEAD0;
 }
@@ -272,6 +281,7 @@ footer {
   padding: 1em 2em;
   width: 100%;
   font-weight: bold;
+  margin: 2em 0em;
 }
 .van-desc{
   font-weight: 500;
@@ -320,6 +330,9 @@ footer {
   font-weight: bold;
   color: #ff8c38;
 }
+.not-login{
+  color: #ff4538;
+}
 
 /* SIGNIN-PAGE-END */
 
@@ -343,8 +356,13 @@ footer {
   gap: 1em;
   background-color: #FFFFFF;
 }
-.host-vans-tile > h3{
-  display: block;
+.host-van-tile-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.host-van-tile-info > h3, p{
+  margin: 0.25em;
 }
 
 .host-vans-container{
@@ -353,10 +371,19 @@ footer {
   gap: 1em;
 }
 .list-new-van{
-  margin: 0;
+  margin: 1em 0em;
   text-align: center;
   color: #FFFFFF;
   font-weight: bold;
+}
+.list-new-div{
+  margin: 2em 1em;
+}
+.host-van-details-container{
+  margin:  2em 1em;
+}
+.host-van-tile-link{
+  color: #000000;
 }
 
 /* HOST-VANS-PAGE-END */

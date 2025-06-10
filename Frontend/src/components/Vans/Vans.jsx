@@ -22,7 +22,7 @@ export default function Vans() {
 
     return (
       <div key={van.id} className="van-tile">
-        <Link to={`/vans/${van.id}`}>
+        <Link to={`/vans/${van.id}`} state = {{search: searchParams.toString()}}>
           <img src={van.imageUrl} alt="van-image" />
           <div className="van-info">
             <h3>{van.name}</h3>
@@ -40,16 +40,23 @@ export default function Vans() {
         <h2>Explore our van options</h2>
 
         <div className="filters">
-          <Link to="?type=simple">
-          <button className={`${type == 'simple'? 'simple':''}`}>Simple</button>
-          </Link>
-          <Link to="?type=rugged">
-          <button className={`${type == 'rugged'? 'rugged':''}`}>Rugged</button>
-          </Link>
-          <Link to="?type=luxury">
-          <button className={`${type == 'luxury'? 'luxury':''}`}>Luxury</button>
-          </Link>
-          <Link to="." className="clear-filters">Clear filters</Link>
+          
+          <button
+          onClick={()=>setSearchParams({type:"simple"})} 
+          className={`${type == 'simple'? 'simple':''}`}>Simple</button>
+          
+          <button
+          onClick={()=>setSearchParams({type:"rugged"})} 
+          className={`${type == 'rugged'? 'rugged':''}`}>Rugged</button>
+          
+          <button
+          onClick={()=>setSearchParams({type:"luxury"})}  
+          className={`${type == 'luxury'? 'luxury':''}`}>Luxury</button>
+          
+          <button
+           onClick={()=>setSearchParams({})}
+          className="clear-filters">Clear filters</button>
+        
         </div>
 
         <div className="vans-div">{vanElements}</div>

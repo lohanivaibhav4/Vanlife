@@ -1,11 +1,13 @@
 import axios from "axios"
 import React from "react"
-import { Link, useParams } from "react-router-dom"
+import { Link, useParams, useLocation } from "react-router-dom"
 import { FaArrowLeft } from "react-icons/fa"
 
 export default function VanDetails(){
     const [van,setVan] = React.useState({})
     const params = useParams()
+    const location = useLocation()
+    const search  = location?.state?.search
 
     React.useEffect(()=>{
         axios.get(`/api/v1/vans/${params.id}`)
@@ -15,8 +17,8 @@ export default function VanDetails(){
 
     return(
          <div className="van-details-container">
-            <Link to='..' relative="path" className="back-to-vans">&larr;
-                <span>Back to all vans</span>
+            <Link to={`../?${search}`} relative="path" className="back-to-vans">&larr;
+                <span>Back to {search ?search.slice(5) : 'all'} vans</span>
             </Link>
             
             <div className="van-details-div">
