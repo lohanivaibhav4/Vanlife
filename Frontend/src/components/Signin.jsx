@@ -1,11 +1,23 @@
 import React from "react"
 import { Link, useLocation, useNavigate } from "react-router-dom"
 import axios from "axios"
+import { CiLogout } from "react-icons/ci";
 
 export default function Signin(){
     const [loginFormData,setLoginFormData] = React.useState({email:"",password:""})
     const location = useLocation()
     const navigate = useNavigate()
+    const login = localStorage.getItem('login')
+    function logout(){
+        localStorage.clear()
+        navigate('/')
+    }
+    if(login){
+        return (<div className="logged-in">
+        <h2>You're already logged in</h2>
+        <div onClick={logout}><CiLogout /></div>
+        </div>)
+    }
 
     function handleSubmit(e){
         e.preventDefault() 
